@@ -1,0 +1,14 @@
+<h1>{{titulo}}</h1>
+<p>{{comentario}}</p>
+<h1>{{year}}</h1>
+<p>Hola soy un parrafo en la vista</p>
+<hr>
+
+<button (click)="ocultarPeliculas()">ocultar Peliculas</button>
+
+<div *ngIf="mostrarPeliculas">
+    <peliculas></peliculas>
+</div>
+
+
+<hr>
