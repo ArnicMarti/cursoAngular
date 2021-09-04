@@ -1,8 +1,8 @@
-<div class="loading"*ngIf="!articles">
+<div class="loanding" *ngIf="!articles">
     Cargando...
 </div>
 
-<div id="articles"*ngIf="articles">
+<div id="articles" *ngIf="articles">
     <article class="article-item" *ngFor="let article of articles">
         <div class="image-wrap">
             <!--Cuando la imagen exista lo siguiente-->

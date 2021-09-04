@@ -23,7 +23,6 @@ export class ArticleService {
 
         if(last != null) {
             articles = 'articles/true';
-
         }
 
         return this._http.get(this.url+articles);

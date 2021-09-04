@@ -3,7 +3,6 @@ import { Article } from 'src/app/models/article';
 import { ArticleService } from 'src/app/services/article.service';
 
 @Component({
-  // Providers
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
@@ -16,23 +15,21 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private _articleService: ArticleService
-    ) {
-    this.title = 'Ultimos artículos';
-   }
+  ) {
+    this.title = 'Últimos articulos';
+  }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
     this._articleService.getArticles(true).subscribe(
       response => {
-        if(response.articles){
+        if (response.articles) {
           this.articles = response.articles;
           console.log(this.articles);
-        }else{
-
         }
+
       },
       error => {
-        console.log('Error');
+        console.log(error);
       }
     );
   }
