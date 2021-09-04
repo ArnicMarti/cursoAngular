@@ -19,6 +19,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { ArticuloComponent } from './components/articulo/articulo.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { EsParPipe } from './pipes/espar.pipe';
+import { ArticlesComponent } from './components/articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { EsParPipe } from './pipes/espar.pipe';
     ErrorComponent,
     ArticuloComponent,
     PeliculaComponent,
-    EsParPipe
+    EsParPipe,
+    ArticlesComponent
   ],
   // Aqui cargamos todos los modulos que importemos o que creemos, para trabajar de forma gobal en aplicacion
   imports: [
