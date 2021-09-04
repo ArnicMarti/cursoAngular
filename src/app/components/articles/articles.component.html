@@ -1,4 +1,8 @@
-<div id="articles">
+<div class="loading"*ngIf="!articles">
+    Cargando...
+</div>
+
+<div id="articles"*ngIf="articles">
     <article class="article-item" *ngFor="let article of articles">
         <div class="image-wrap">
             <!--Cuando la imagen exista lo siguiente-->
@@ -9,7 +13,7 @@
 
         <h2>{{article.title}}</h2>
         <span class="date">
-            {{article.date}}
+            {{article.date | amLocale: 'es' | amTimeAgo}}
         </span>
         <a href="#">Leer más</a>
 

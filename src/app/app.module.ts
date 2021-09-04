@@ -20,6 +20,10 @@ import { ArticuloComponent } from './components/articulo/articulo.component';
 import { PeliculaComponent } from './components/pelicula/pelicula.component';
 import { EsParPipe } from './pipes/espar.pipe';
 import { ArticlesComponent } from './components/articles/articles.component';
+import { MomentModule } from 'ngx-moment';
+import { ArticleComponent } from './component/article/article.component';
+
+//import { MomentModule} from 'angular2-moment' ;
 
 @NgModule({
   declarations: [
@@ -38,14 +42,19 @@ import { ArticlesComponent } from './components/articles/articles.component';
     ArticuloComponent,
     PeliculaComponent,
     EsParPipe,
-    ArticlesComponent
+    ArticlesComponent,
+    ArticleComponent
+    
+    
   ],
   // Aqui cargamos todos los modulos que importemos o que creemos, para trabajar de forma gobal en aplicacion
   imports: [
     BrowserModule,
     routing,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MomentModule
+    
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
