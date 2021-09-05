@@ -7,6 +7,7 @@ import { Global } from "./global";
 @Injectable()
 export class ArticleService {
     public url: string;
+    public article: Article;
 
     constructor(
         private _http: HttpClient
@@ -25,7 +26,11 @@ export class ArticleService {
             articles = 'articles/true';
         }
 
-        return this._http.get(this.url+articles);
+        return this._http.get(this.url+ articles);
+    }
+
+    getArticle(articleId):Observable<any>{
+        return this._http.get(this.url +'article/'+ articleId);
     }
 
 }
