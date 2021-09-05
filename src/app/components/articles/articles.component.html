@@ -15,10 +15,14 @@
         <span class="date">
             {{article.date | amLocale: 'es' | amTimeAgo}}
         </span>
-        <a [routerLink]="['/blog/articulo/', article._id]">Leer más</a>
+        <a [routerLink]="['/blog/articulo', article._id]">Leer más</a>
 
         <div class="clearfix"></div>
     </article>
 
+    
+
+
 
 </div>
+<app-sidebar></app-sidebar>

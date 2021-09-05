@@ -222,6 +222,7 @@ body {
    transition: 300ms all;
    border: none;
    cursor:pointer;
+   text-align: center;
 }
 
 .btn-success{
@@ -230,6 +231,24 @@ body {
 
 .btn-success:hover{
     background:black;
+}
+
+.btn-warning{
+    background-color: rgb(12, 58, 209);
+    color: snow !important;
+    text-decoration: none;
+
+}
+.btn-danger{
+    background-color: rgba(231,56,39,1);
+    text-decoration: none;
+    color: snow !important;
+}
+
+.btn-warning,
+.btn-danger{
+    transition: 300ms;
+    opacity: 0.8;
 }
 
 .mid-form{

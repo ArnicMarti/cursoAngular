@@ -1,3 +1,43 @@
-<article class="article-item article-detail">
-   
-</article>
+<div class="center">
+    <section id="content">
+
+            <article class="article-item article-detail">
+                <div class="image-wrap">
+                    <!--Cuando la imagen exista lo siguiente-->
+                    <img src="{{url + 'get-image/' + article.image}}" alt="{{article.title}}"  *ngIf="article.image"/>
+                    <!-- Cuando la imagen no exista lo siguiente-->
+                    <img src="assets/images/default.png" alt="{{article.title}}"  *ngIf="!article.image"/>
+                </div>
+
+                <h1 class="subheader">{{article.title}}</h1>
+                <span class="date">
+                    <!-- {{article.date | amLocale: 'es' | amTimeAgo}} -->
+                    {{article.date}}
+                </span>
+                <p>
+                    {{article.content}}
+                </p>
+
+                <a href="#" class="btn btn-success">Editar</a>
+                <a href="#" class="btn btn-danger">Borrar</a>
+
+                <div class="clearfix"></div>
+            </article>
+        
+    </section>
+
+    <aside id="sidebar">
+        <div id="nav-blog" class="sidebar-item">
+            <h3>Puedes hacer esto</h3>
+            <a href="#" class="btn btn-success">Crear artículo</a>
+        </div>
+
+        <div id="search" class="sidebar-item">
+                <h3>Buscador</h3>
+                <p>Encuentra el artículo que buscas</p>
+                <form>
+                    <input type="text" name="search"  />
+                    <input type="submit" name="submit" value="Buscar" class="btn btn-danger" />
+                </form>
+        </div>
+    </aside>

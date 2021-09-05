@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { ArticleService } from 'src/app/services/article.service';
 import { Article } from 'src/app/models/article';
+import { Global } from 'src/app/services/global';
 
 
 @Component({
@@ -13,19 +14,23 @@ import { Article } from 'src/app/models/article';
 export class ArticleComponent implements OnInit {
 
   public article: Article;
+  public url: string;
 
   constructor(
     private _articleService: ArticleService,
     private _route: ActivatedRoute,
     private _router: Router
 
-  ) { }
+  ) {
+    this.url = Global.url;
+   }
 
   ngOnInit() {
     this._route.params.subscribe(params => {
       let id = params['id'];
 
       this._articleService.getArticle(id).subscribe(
+
         response => {
           if (response.article) {
             this.article = response.article;
@@ -35,6 +40,7 @@ export class ArticleComponent implements OnInit {
         },
         error => {
           console.log(error);
+          this._router.navigate(['/home']);
 
         }
       );
