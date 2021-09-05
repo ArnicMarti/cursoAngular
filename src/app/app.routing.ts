@@ -10,12 +10,14 @@ import { PeliculasComponent } from './components/peliculas/peliculas.component';
 import { PaginaComponent } from './components/pagina/pagina.component';
 import { ErrorComponent } from './components/error/error.component';
 import {ArticuloComponent} from './components/articulo/articulo.component';
+import { ArticleComponent } from './components/article/article.component';
 
 // Array de rutas
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},
     {path: 'blog', component: BlogComponent},
+    {path: 'blog/articulo/:_id', component: ArticleComponent},
     {path: 'formulario', component: FormularioComponent},
     {path: 'pelicula', component: PeliculasComponent},
     {path: 'pagina-de-pruebas', component: PaginaComponent},
